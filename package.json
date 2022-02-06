@@ -9,7 +9,8 @@
     "test-decode-jwt-node": "jest --runInBand ./src/jwt/node-crypto/decode_jwt_node.spec.ts",
     "test-issue-jwt": "jest --runInBand ./src/jwt/issue_jwt.spec.ts",
     "test-verify-jwt": "jest --runInBand ./src/jwt/verify_jwt.spec.ts",
-    "test-decode-jwt": "jest --runInBand ./src/jwt/decode_jwt.spec.ts"
+    "test-decode-jwt": "jest --runInBand ./src/jwt/decode_jwt.spec.ts",
+    "test-generate-key-pair": "jest --runInBand ./src/jwt/generateKeyPair.spec.ts"
   },
   "author": "Vocaltech",
   "license": "ISC",
