@@ -10,7 +10,8 @@
     "test-issue-jwt": "jest --runInBand ./src/jwt/issue_jwt.spec.ts",
     "test-verify-jwt": "jest --runInBand ./src/jwt/verify_jwt.spec.ts",
     "test-decode-jwt": "jest --runInBand ./src/jwt/decode_jwt.spec.ts",
-    "test-generate-key-pair": "jest --runInBand ./src/jwt/generateKeyPair.spec.ts"
+    "test-generate-key-pair": "jest --runInBand ./src/jwt/generateKeyPair.spec.ts",
+    "serve:dev": "set DEBUG=server && nodemon ./src/app.ts"
   },
   "author": "Vocaltech",
   "license": "ISC",
