@@ -11,6 +11,7 @@
     "test-verify-jwt": "jest --runInBand ./src/jwt/verify_jwt.spec.ts",
     "test-decode-jwt": "jest --runInBand ./src/jwt/decode_jwt.spec.ts",
     "test-generate-key-pair": "jest --runInBand ./src/jwt/generateKeyPair.spec.ts",
+    "test-passwordUtils": "jest --runInBand ./src/utils/passwordUtils.spec.ts",
     "serve:dev": "set DEBUG=server && nodemon ./src/app.ts"
   },
   "author": "Vocaltech",
