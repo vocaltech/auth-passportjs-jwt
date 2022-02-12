@@ -1,3 +1,4 @@
+import path from 'path'
 import { issue_jwt } from './issue_jwt'
 import { readFileSync } from 'fs'
 
@@ -12,7 +13,8 @@ describe('issue jwt test', () => {
     }
 
     it(' should return the jwt token', () => {
-        const privateKey = readFileSync( __dirname + '/../../keys/id_rsa_priv.pem', 'utf-8')
+        const pathToKey = path.join(__dirname, '../../keys', 'id_rsa_priv.pem')
+        const privateKey = readFileSync(pathToKey, 'utf-8')
         const jwtToken = issue_jwt(payload, privateKey)
 
         expect(jwtToken).toBe(JWT)
