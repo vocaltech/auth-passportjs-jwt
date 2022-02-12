@@ -12,7 +12,7 @@ describe('issue jwt test', () => {
     }
 
     it(' should return the jwt token', () => {
-        const privateKey = readFileSync( __dirname + '/priv_key.pem', 'utf-8')
+        const privateKey = readFileSync( __dirname + '/../../keys/id_rsa_priv.pem', 'utf-8')
         const jwtToken = issue_jwt(payload, privateKey)
 
         expect(jwtToken).toBe(JWT)
