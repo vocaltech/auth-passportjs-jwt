@@ -9,10 +9,10 @@ export const generateKeyPair = (): { privateKey: string, publicKey: string } => 
             type: 'spki',
             format: 'pem'
           },
-          privateKeyEncoding: {
-            type: 'pkcs8',
-            format: 'pem'
-          }
+        privateKeyEncoding: {
+          type: 'pkcs8',
+          format: 'pem'
+        }
     })
 
     // save the keys
