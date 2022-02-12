@@ -1,5 +1,9 @@
 > ### JWT basics with jsonwebtoken library
 
+**Generate key pair**
+
+<code>const { privateKey, publicKey } = generateKeyPair()</code>
+
 **Issue JWT token**
 
 <code>issue_jwt(payload, privateKey)</code>
