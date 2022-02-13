@@ -8,6 +8,8 @@ export const validatedEnv = () => {
         MONGO_PORT: port(),
         MONGO_DB: str(),
         MONGO_USER: str(),
-        MONGO_PASSWORD: str()
+        MONGO_PASSWORD: str(),
+        PUBLIC_KEY: str(),
+        PRIVATE_KEY: str()
     })
 }
