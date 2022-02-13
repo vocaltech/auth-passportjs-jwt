@@ -40,22 +40,18 @@ export const login = async(req: Request, res: Response, next: NextFunction) => {
 
 export const logout = async(req: Request, res: Response, next: NextFunction) => {
     req.logout();
+
     //res.redirect('/protected-route');
-    res.send('Logout Ok !')
+    res.status(200).json({ message: 'Logout !' })
 }
 
 export const protected_route = async(req: Request, res: Response, next: NextFunction) => {
-    res.send('You are allowed to watch the protected route.');
+    res.status(200).json({ message: 'You are allowed to watch the protected route !' })
 }
 
 export const register = async(req: Request, res: Response, next: NextFunction) => {
-    const username: string = req.body.username // see customFields @ passport.ts
-    //const username: string = req.body.uname // see customFields @ passport.ts
-
-    const password: string = req.body.password // see customFields @ passport.ts
-    //const password: string = req.body.pw // see customFields @ passport.ts
-
-    console.log(`username: ${username} / password: ${password}`)
+    const username: string = req.body.username
+    const password: string = req.body.password
 
     const { salt, hash } = genPassword(password);
 
