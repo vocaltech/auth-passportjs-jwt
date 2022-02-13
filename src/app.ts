@@ -8,6 +8,8 @@ import { validatedEnv } from './utils/validatedEnv'
 import { errorMiddleware } from './middlewares/error.middleware'
 import { MongoDbHandler } from './utils/MongoDbHandler'
 
+import baseRouter from './routes/index'
+
 let app: Application;
 
 const bootstrap = async () => {
@@ -41,12 +43,15 @@ const bootstrap = async () => {
     /**
      * -------------- PASSPORTJS SETUP ----------------
      */
+     require('./config/passport')
 
+     // This will initialize the passport object on every request
+     //app.use(passport.initialize())
 
     /**
      * -------------- ROUTES SETUP ----------------
      */
-
+     app.use('/api', baseRouter);
 
     /**
      * -------------- ERROR MW SETUP ----------------
