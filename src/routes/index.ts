@@ -8,9 +8,6 @@ import { login, register, protected_route } from './user.router'
 //
 const userRouter = Router();
 
-/*
- * Uncomment the line below for production
- */
 userRouter.get('/protected', passport.authenticate('jwt', { session: false }), protected_route)
 
 /*
