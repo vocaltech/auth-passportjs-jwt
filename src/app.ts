@@ -1,5 +1,6 @@
 import { Server } from 'http'
 import express, { Application } from 'express'
+import passport from 'passport'
 import cors from 'cors'
 import morgan from 'morgan'
 import chalk from 'chalk'
@@ -46,7 +47,7 @@ const bootstrap = async () => {
      require('./config/passport')
 
      // This will initialize the passport object on every request
-     //app.use(passport.initialize())
+     app.use(passport.initialize())
 
     /**
      * -------------- ROUTES SETUP ----------------
