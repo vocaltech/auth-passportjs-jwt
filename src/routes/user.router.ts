@@ -38,13 +38,6 @@ export const login = async(req: Request, res: Response, next: NextFunction) => {
     })
 }
 
-export const logout = async(req: Request, res: Response, next: NextFunction) => {
-    req.logout();
-
-    //res.redirect('/protected-route');
-    res.status(200).json({ message: 'Logout !' })
-}
-
 export const protected_route = async(req: Request, res: Response, next: NextFunction) => {
     res.status(200).json({ message: 'You are allowed to watch the protected route !' })
 }
