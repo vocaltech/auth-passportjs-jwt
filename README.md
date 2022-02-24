@@ -4,9 +4,13 @@
 
 <code>const { privateKey, publicKey } = generateKeyPair()</code>
 
-**Issue JWT token**
+**Issue JWT token - without expires**
 
 <code>issue_jwt(payload, privateKey)</code>
+
+**Issue JWT token - with expires**
+
+<code>issue_jwt_expires = (payload: object, privateKey: string, expiresIn: string)</code>
 
 **Verify JWT token**
 
