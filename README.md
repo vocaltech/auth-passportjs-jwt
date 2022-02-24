@@ -6,7 +6,7 @@
 
 **Issue JWT token - without expires**
 
-<code>issue_jwt(payload, privateKey)</code>
+<code>issue_jwt = (payload: object, privateKey: string)</code>
 
 **Issue JWT token - with expires**
 
